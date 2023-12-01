@@ -12,6 +12,8 @@ import Data.String
 import System.Environment
 import AoCLib.AoCLib as AoC
 
+-- method 1
+
 calibrate :: [Int] -> Int
 calibrate (x:ys) = (10 * x) + (AoC.getLast (x:ys))
   
@@ -31,9 +33,36 @@ tidy (x:xs)
   | x == '0'  = (0:(tidy xs))
   | otherwise = (tidy xs)
 
+-- main :: IO()
+-- main = do
+--   [fileInput] <- getArgs
+--   fileContents <- readFile fileInput
+--   let answer = foldr1 (+) (map (calibrate . tidy) (lines fileContents)))
+--           in putStrLn (show answer)
+
+-- method 2
+
+tidy2 :: String -> Int
+tidy2 (x:xs)
+  | x == '1'  = 1
+  | x == '2'  = 2
+  | x == '3'  = 3
+  | x == '4'  = 4
+  | x == '5'  = 5
+  | x == '6'  = 6
+  | x == '7'  = 7
+  | x == '8'  = 8
+  | x == '9'  = 9
+  | x == '0'  = 0
+  | otherwise = (tidy2 xs)
+
+calibrate2 :: String -> Int
+calibrate2 x = (10 * (tidy2 x)) + (tidy2 (reverse x))
+
+
 main :: IO()
 main = do
   [fileInput] <- getArgs
   fileContents <- readFile fileInput
-  let answer = foldr1 (+) (map (calibrate . tidy) (lines fileContents)))
+  let answer = foldr1 (+) (map (calibrate2) (lines fileContents))
          in putStrLn (show answer)

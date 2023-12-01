@@ -20,8 +20,8 @@ clean:
 
 Day-01: Day-01-1 Day-01-2
 
-Day-01-1: Day-01-1.hs
+Day-01-1: Day-01-1.hs AoCLib/AoCLib.o
 	ghc Day-01-1.hs
 
-Day-01-2: Day-01-2.hs
+Day-01-2: Day-01-2.hs AoCLib/AoCLib.o
 	ghc Day-01-2.hs

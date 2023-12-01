@@ -10,7 +10,9 @@ module AoCLib.AoCLib
     findCommonElement,
     findUniqueSequence,
     getLast,
-    getDigits
+    getDigits,
+    getFirstDigit,
+    getLastDigit
   ) where
 
 import qualified Data.Set as Set
@@ -122,5 +124,56 @@ getDigits (x:xs)
   | otherwise = getDigits xs
   where xLen = length (x:xs)
 
+-- spelt out digits can overlap
+getFirstDigit :: String -> Int
+getFirstDigit (x:xs)
+  | x == '1' = 1
+  | x == '2' = 2
+  | x == '3' = 3
+  | x == '4' = 4
+  | x == '5' = 5
+  | x == '6' = 6
+  | x == '7' = 7
+  | x == '8' = 8
+  | x == '9' = 9
+  | x == '0' = 0
+  | (xLen >= 3) && (x == 'o') && ((head xs) == 'n') && ((head (tail xs)) == 'e') = 1
+  | (xLen >= 3) && (x == 't') && ((head xs) == 'w') && ((head (tail xs)) == 'o') = 2
+  | (xLen >= 5) && (x == 't') && ((head xs) == 'h') && ((head (tail xs)) == 'r') && ((head (tail (tail xs))) == 'e') && ((head (tail (tail (tail xs)))) == 'e') = 3
+  | (xLen >= 4) && (x == 'f') && ((head xs) == 'o') && ((head (tail xs)) == 'u') && ((head (tail (tail xs))) == 'r') = 4
+  | (xLen >= 4) && (x == 'f') && ((head xs) == 'i') && ((head (tail xs)) == 'v') && ((head (tail (tail xs))) == 'e') = 5
+  | (xLen >= 3) && (x == 's') && ((head xs) == 'i') && ((head (tail xs)) == 'x') = 6
+  | (xLen >= 5) && (x == 's') && ((head xs) == 'e') && ((head (tail xs)) == 'v') && ((head (tail (tail xs))) == 'e') && ((head (tail (tail (tail xs)))) == 'n') = 7
+  | (xLen >= 5) && (x == 'e') && ((head xs) == 'i') && ((head (tail xs)) == 'g') && ((head (tail (tail xs))) == 'h') && ((head (tail (tail (tail xs)))) == 't') = 8
+  | (xLen >= 4) && (x == 'n') && ((head xs) == 'i') && ((head (tail xs)) == 'n') && ((head (tail (tail xs))) == 'e') = 9
+  | otherwise = getFirstDigit xs
+  where xLen = length (x:xs)
 
+-- spelt out digits can overlap
+getLastDigit :: String -> Int
+getLastDigit x = getLastDigit_ (reverse x)
+
+getLastDigit_ :: String -> Int
+getLastDigit_ (x:xs)
+  | x == '1' = 1
+  | x == '2' = 2
+  | x == '3' = 3
+  | x == '4' = 4
+  | x == '5' = 5
+  | x == '6' = 6
+  | x == '7' = 7
+  | x == '8' = 8
+  | x == '9' = 9
+  | x == '0' = 0
+  | (xLen >= 3) && (x == 'e') && ((head xs) == 'n') && ((head (tail xs)) == 'o') = 1
+  | (xLen >= 3) && (x == 'o') && ((head xs) == 'w') && ((head (tail xs)) == 't') = 2
+  | (xLen >= 5) && (x == 'e') && ((head xs) == 'e') && ((head (tail xs)) == 'r') && ((head (tail (tail xs))) == 'h') && ((head (tail (tail (tail xs)))) == 't') = 3
+  | (xLen >= 4) && (x == 'r') && ((head xs) == 'u') && ((head (tail xs)) == 'o') && ((head (tail (tail xs))) == 'f') = 4
+  | (xLen >= 4) && (x == 'e') && ((head xs) == 'v') && ((head (tail xs)) == 'i') && ((head (tail (tail xs))) == 'f') = 5
+  | (xLen >= 3) && (x == 'x') && ((head xs) == 'i') && ((head (tail xs)) == 's') = 6
+  | (xLen >= 5) && (x == 'n') && ((head xs) == 'e') && ((head (tail xs)) == 'v') && ((head (tail (tail xs))) == 'e') && ((head (tail (tail (tail xs)))) == 's') = 7
+  | (xLen >= 5) && (x == 't') && ((head xs) == 'h') && ((head (tail xs)) == 'g') && ((head (tail (tail xs))) == 'i') && ((head (tail (tail (tail xs)))) == 'e') = 8
+  | (xLen >= 4) && (x == 'e') && ((head xs) == 'n') && ((head (tail xs)) == 'i') && ((head (tail (tail xs))) == 'n') = 9
+  | otherwise = getLastDigit_ xs
+  where xLen = length (x:xs)
 
