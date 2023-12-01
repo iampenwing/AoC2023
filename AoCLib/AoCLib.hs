@@ -9,7 +9,8 @@ module AoCLib.AoCLib
     findCommon,
     findCommonElement,
     findUniqueSequence,
-    getLast
+    getLast,
+    getDigits
   ) where
 
 import qualified Data.Set as Set
@@ -94,3 +95,32 @@ isUniqueSequence (topChar:restOfSequence)
 getLast :: [a] -> a
 getLast (x:[]) = x
 getLast (_:xs) = getLast xs
+
+-- spelt out digits can overlap
+getDigits :: String -> [Int]
+getDigits [] = []
+getDigits (x:xs)
+  | x == '1' = (1:(getDigits xs))
+  | x == '2' = (2:(getDigits xs))
+  | x == '3' = (3:(getDigits xs))
+  | x == '4' = (4:(getDigits xs))
+  | x == '5' = (5:(getDigits xs))
+  | x == '6' = (6:(getDigits xs))
+  | x == '7' = (7:(getDigits xs))
+  | x == '8' = (8:(getDigits xs))
+  | x == '9' = (9:(getDigits xs))
+  | x == '0' = (0:(getDigits xs))
+  | (xLen >= 3) && (x == 'o') && ((head xs) == 'n') && ((head (tail xs)) == 'e') = (1:(getDigits (tail xs)))
+  | (xLen >= 3) && (x == 't') && ((head xs) == 'w') && ((head (tail xs)) == 'o') = (2:(getDigits (tail xs)))
+  | (xLen >= 5) && (x == 't') && ((head xs) == 'h') && ((head (tail xs)) == 'r') && ((head (tail (tail xs))) == 'e') && ((head (tail (tail (tail xs)))) == 'e') = (3:(getDigits (tail (tail (tail xs)))))
+  | (xLen >= 4) && (x == 'f') && ((head xs) == 'o') && ((head (tail xs)) == 'u') && ((head (tail (tail xs))) == 'r') = (4:(getDigits (tail (tail xs)))) 
+  | (xLen >= 4) && (x == 'f') && ((head xs) == 'i') && ((head (tail xs)) == 'v') && ((head (tail (tail xs))) == 'e') = (5:(getDigits (tail (tail xs))))
+  | (xLen >= 3) && (x == 's') && ((head xs) == 'i') && ((head (tail xs)) == 'x') = (6:(getDigits (tail xs)))
+  | (xLen >= 5) && (x == 's') && ((head xs) == 'e') && ((head (tail xs)) == 'v') && ((head (tail (tail xs))) == 'e') && ((head (tail (tail (tail xs)))) == 'n') = (7:(getDigits (tail (tail (tail xs)))))
+  | (xLen >= 5) && (x == 'e') && ((head xs) == 'i') && ((head (tail xs)) == 'g') && ((head (tail (tail xs))) == 'h') && ((head (tail (tail (tail xs)))) == 't') = (8:(getDigits (tail (tail (tail xs)))))
+  | (xLen >= 4) && (x == 'n') && ((head xs) == 'i') && ((head (tail xs)) == 'n') && ((head (tail (tail xs))) == 'e') = (9:(getDigits (tail (tail xs))))
+  | otherwise = getDigits xs
+  where xLen = length (x:xs)
+
+
+
