@@ -8,7 +8,8 @@ module AoCLib.AoCLib
     packRucksack,
     findCommon,
     findCommonElement,
-    findUniqueSequence
+    findUniqueSequence,
+    getLast
   ) where
 
 import qualified Data.Set as Set
@@ -90,3 +91,6 @@ isUniqueSequence (topChar:restOfSequence)
   | topChar `elem` restOfSequence = False
   | otherwise                     = isUniqueSequence restOfSequence
   
+getLast :: [a] -> a
+getLast (x:[]) = x
+getLast (_:xs) = getLast xs
