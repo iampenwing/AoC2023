@@ -16,3 +16,7 @@ Part 2 adds the idea that digits can be spelt out.
 
 
 I also think I got composing functions right so I can map with `calibrate . AoC.getDigits` rather than  mapping with each separately.
+
+## Day 2 Notes
+Well, this is definitely a puzzle where parsing the input into usable data structures was the biggest part of the challenge. I use a lot of shortcuts because of the simplicity of the data and there is no error checking. 
+
