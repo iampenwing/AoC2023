@@ -1,5 +1,17 @@
 # AoC2023
 
+## My Stats
+
+I'm doing this from the UK and so usually getting up several hours after the puzzle goes live so, yeah, I aint scoring points on the global leaderboard.
+
+For up to about Day 10 I am not working so I can get started whenever. Days 11-15 I am in work so might have to prioritise that...
+
+| Day | Part 1 Time | Part 1 Rank | Part 2 Time | Part 2 Rank |
+| --- | --- | --- | --- | --- |
+| 3 | 05:36:15 | 26554 | 06:55:39 | 25373 |
+| 2 | 05:01:33 | 32533 | 08:42:10 | 48827 |
+| 1 | 04:01:33 | 34750 | 06:38:35 | 33121 |
+
 ## Day 1 Notes
 Part 1 is simple enough - find the digits and make number from the first and last digits
 
