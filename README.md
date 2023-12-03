@@ -20,3 +20,7 @@ I also think I got composing functions right so I can map with `calibrate . AoC.
 ## Day 2 Notes
 Well, this is definitely a puzzle where parsing the input into usable data structures was the biggest part of the challenge. I use a lot of shortcuts because of the simplicity of the data and there is no error checking. 
 
+## Day 3 Notes
+Eugh - I hate these grid ones...The parsing I did for Part 1 was insufficient for Part 2, but at least it was enough scaffolding to add some additional data to what I was pulling out and then refactor into a different format to use in Part 2. 
+
+Why do I keep doing this to myself?!?
