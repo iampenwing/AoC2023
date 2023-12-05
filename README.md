@@ -8,6 +8,7 @@ For up to about Day 10 I am not working so I can get started whenever. Days 11-1
 
 | Day | Part 1 Time | Part 1 Rank | Part 2 Time | Part 2 Rank |
 | --- | --- | --- | --- | --- |
+| 5 | 05:24:32 | 26711 | 09:41:50 | 18894 |
 | 4 | 06:17:54 | 43931 | 06:42:04 | 34739 |
 | 3 | 05:36:15 | 26554 | 06:55:39 | 25373 |
 | 2 | 05:01:33 | 32533 | 08:42:10 | 48827 |
@@ -40,3 +41,6 @@ Why do I keep doing this to myself?!?
 
 ## Day 4 Notes
 I finally got round to adding an `ints` style function to AoCLib (`getInts :: String -> [Int]`) - this is a function which extracts all Integers from a string. At the moment, it doesn't handle negative numbers - minus signs are just discarded as "rubbish"
+
+## Day 5 Notes
+Yeah, I knew simply making a list of all the seeds and running through for Part 2 was not going to work, but eugh the debugging on this one once I settled on the splitting ranges solution...
