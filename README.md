@@ -8,6 +8,7 @@ For up to about Day 10 I am not working so I can get started whenever. Days 11-1
 
 | Day | Part 1 Time | Part 1 Rank | Part 2 Time | Part 2 Rank |
 | --- | --- | --- | --- | --- |
+| 6 | 04:13:12 | 28274 | 04:23:11 | 27360 |
 | 5 | 05:24:32 | 26711 | 09:41:50 | 18894 |
 | 4 | 06:17:54 | 43931 | 06:42:04 | 34739 |
 | 3 | 05:36:15 | 26554 | 06:55:39 | 25373 |
@@ -44,3 +45,8 @@ I finally got round to adding an `ints` style function to AoCLib (`getInts :: St
 
 ## Day 5 Notes
 Yeah, I knew simply making a list of all the seeds and running through for Part 2 was not going to work, but eugh the debugging on this one once I settled on the splitting ranges solution...
+
+## Day 6 Notes
+Recognised early onthat it was probably better to use the quadratic equation stuff to calculate this rather than testing each possible game.
+
+Part 2 required escalating up the data types for the necessary precision (I was off by 1 because of precision issues first time I ran with `Ìnt`s and `Float`s rather than `Integer`s and `Double`s. 
