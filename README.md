@@ -8,6 +8,7 @@ For up to about Day 10 I am not working so I can get started whenever. Days 11-1
 
 | Day | Part 1 Time | Part 1 Rank | Part 2 Time | Part 2 Rank |
 | --- | --- | --- | --- | --- |
+| 7 | 06:24:39 | 26888 | 06:48:13 | 21900 |
 | 6 | 04:13:12 | 28274 | 04:23:11 | 27360 |
 | 5 | 05:24:32 | 26711 | 09:41:50 | 18894 |
 | 4 | 06:17:54 | 43931 | 06:42:04 | 34739 |
@@ -50,3 +51,6 @@ Yeah, I knew simply making a list of all the seeds and running through for Part 
 Recognised early onthat it was probably better to use the quadratic equation stuff to calculate this rather than testing each possible game.
 
 Part 2 required escalating up the data types for the necessary precision (I was off by 1 because of precision issues first time I ran with `Ìnt`s and `Float`s rather than `Integer`s and `Double`s. 
+
+## Day 7 Notes
+Urghh... This would not have taken two and a half hours if I hadn't had a complete brainfart on Insertion Sorting - that took most of my debugging... **hint** you need the helper function to insert into the accumulator.
