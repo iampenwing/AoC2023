@@ -8,6 +8,8 @@ For up to about Day 10 I am not working so I can get started whenever. Days 11-1
 
 | Day | Part 1 Time | Part 1 Rank | Part 2 Time | Part 2 Rank |
 | --- | --- | --- | --- | --- |
+| 9 | 05:30:38 | 23129 | 05:34:16 | 22091 |
+| 8 | 04:14:05 | 25347 | | |
 | 7 | 06:24:39 | 26888 | 06:48:13 | 21900 |
 | 6 | 04:13:12 | 28274 | 04:23:11 | 27360 |
 | 5 | 05:24:32 | 26711 | 09:41:50 | 18894 |
@@ -54,3 +56,9 @@ Part 2 required escalating up the data types for the necessary precision (I was 
 
 ## Day 7 Notes
 Urghh... This would not have taken two and a half hours if I hadn't had a complete brainfart on Insertion Sorting - that took most of my debugging... **hint** you need the helper function to insert into the accumulator.
+
+## Day 8 Notes
+Oh noooooo, it's Chinese Remainder Theory
+
+## Day 9
+Simple, very simple. Except that I had not got negative number reading in ``AoCLib.getInts`` - well, I do now...
