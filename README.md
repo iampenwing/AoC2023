@@ -60,9 +60,11 @@ Urghh... This would not have taken two and a half hours if I hadn't had a comple
 ## Day 8 Notes
 Oh noooooo, it's Chinese Remainder Theory
 
-<details><summary></summary>Part 2...</summary> 
+<details>
+  <summary>Part 2...</summary> 
   
 It helps to just "randomly" know that each cycle starts at ``..A`` and ends at ``..Z`` and be confident enough of that that then you can just use ``lcm`` (Lowest Common Multiplier) without having to worry about offsets. You just need to know that information. Or be told it explicitly.
+</details>
 
 
 
