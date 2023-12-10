@@ -8,6 +8,7 @@ For up to about Day 10 I am not working so I can get started whenever. Days 11-1
 
 | Day | Part 1 Time | Part 1 Rank | Part 2 Time | Part 2 Rank |
 | --- | --- | --- | --- | --- |
+| 10 | 05:59:37 | 17471 | 17:43:55 | 23962 |
 | 9 | 05:30:38 | 23129 | 05:34:16 | 22091 |
 | 8 | 04:14:05 | 25347 | >24h | 47657 |
 | 7 | 06:24:39 | 26888 | 06:48:13 | 21900 |
@@ -66,7 +67,16 @@ Oh noooooo, it's Chinese Remainder Theory
 It helps to just "randomly" know that each cycle starts at ``..A`` and ends at ``..Z`` and be confident enough of that that then you can just use ``lcm`` (Lowest Common Multiplier) without having to worry about offsets. You just need to know that information. Or be told it explicitly.
 </details>
 
-
-
-## Day 9
+## Day 9 Notes
 Simple, very simple. Except that I had not got negative number reading in ``AoCLib.getInts`` - well, I do now...
+
+## Day 10 Notes
+Part 1 felt relatively straightforward. I collected more infor than I needed, technically, in case I was futureproofing for finding the manhatten distance in some way in Part 2...
+
+I wasn't.
+
+The basic solution to Part 2 came just after I left the house to do something, but refinement took sooooo long. I ended up slicing the loop up into column-slices to make it quicker to search as I was having to search it **a lot**. I was originally going to be counting and checking oddness in each direction but some frustrated searching convinced me, rightly, I only needed to search in one direction - apparently, this method is used in graphics a lot. 
+
+Other people used wierd mathematical processes (shoelace theory) which I looked at and went "err... maybe not"
+
+Part 2 has some fixes to bugs which are, techically, also in Part 1 (when S is on an edge, but not a corner) which only cropped up in one exaple for Part 2. 
