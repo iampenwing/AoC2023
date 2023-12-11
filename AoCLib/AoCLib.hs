@@ -13,7 +13,8 @@ module AoCLib.AoCLib
     getDigits,
     getFirstDigit,
     getLastDigit,
-    getInts
+    getInts,
+    rotateGrid
   ) where
 
 import qualified Data.Set as Set
@@ -259,4 +260,6 @@ getInts_rubbish (x:(y:xs)) acc
   | otherwise = getInts_rubbish (y:xs) acc
 
   
-
+rotateGrid :: [[a]] -> [[a]]
+rotateGrid ([]:_) = [] --map head ((x:[]):xs)
+rotateGrid g = (map head g):(rotateGrid (map tail g))
