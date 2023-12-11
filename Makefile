@@ -1,4 +1,4 @@
-default: Day-01 Day-02 Day-03 Day-04 Day-05 Day-06 Day-07 Day-08 Day-09 Day-10
+default: Day-01 Day-02 Day-03 Day-04 Day-05 Day-06 Day-07 Day-08 Day-09 Day-10 Day-11
 
 veryclean: clean
 	touch temp.o temp.hi
@@ -97,4 +97,12 @@ Day-10-1: Day-10-1.hs AoClib/AoCLib.o
 
 Day-10-2: Day-10-2.hs AocLib/AoCLib.o
 	ghc Day-10-2.hs
+
+Day-11: Day-11-1 Day-11-2
+
+Day-11-1: Day-11-1.hs AoClib/AoCLib.o
+	ghc Day-11-1.hs
+
+Day-11-2: Day-11-2.hs AocLib/AoCLib.o
+	ghc Day-11-2.hs
 

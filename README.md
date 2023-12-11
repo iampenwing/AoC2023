@@ -8,6 +8,7 @@ For up to about Day 10 I am not working so I can get started whenever. Days 11-1
 
 | Day | Part 1 Time | Part 1 Rank | Part 2 Time | Part 2 Rank |
 | --- | --- | --- | --- | --- |
+| 11 | 02:33:31 | 11535 | 03:00:15 | 11007 |
 | 10 | 05:59:37 | 17471 | 17:43:55 | 23962 |
 | 9 | 05:30:38 | 23129 | 05:34:16 | 22091 |
 | 8 | 04:14:05 | 25347 | >24h | 47657 |
@@ -80,3 +81,8 @@ The basic solution to Part 2 came just after I left the house to do something, b
 Other people used wierd mathematical processes (shoelace theory) which I looked at and went "err... maybe not"
 
 Part 2 has some fixes to bugs which are, techically, also in Part 1 (when S is on an edge, but not a corner) which only cropped up in one exaple for Part 2. 
+
+## Day 11 Notes
+Actually fairly simple - part 1 I wrote and had executing correctly almost immediately (I forgot a ``::`` in a function definition.
+
+Part 2 required some refactoring to track expanded columns rather than just doubling them in the grid, and a bit more debugging, but again fairly simple...
